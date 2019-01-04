@@ -10,7 +10,9 @@
 
 기존의 magnitude 많을 고려하여 prunning 하는 것은 문제가 있음.
 
->To sparsify the filters without impacting the accuracy, the simplest method is pruning weights with magnitudes smaller than a threshold, which is referred to as magnitudebased pruning [6–10]. The advantage of this approach is that it is fast, and works well when a few weights are removed, and thus the correlation between weights only has a minor impact on the output. However, as more weights are pruned, this method introduces a large output error as the correlation between weights becomes more critical. For example, if most of the small-magnitude weights are negative, the output error will become large once many of these small negative weights are removed using the magnitude-based pruning. In this case, it would be desirable to remove a large positive weight to compensate for the introduced error instead of removing more smaller negative weights.
+>To sparsify the filters without impacting the accuracy, the simplest method is pruning weights with magnitudes smaller than a threshold, which is referred to as magnitudebased pruning [6–10]. The advantage of this approach is that it is fast, and works well when a few weights are removed, and thus the correlation between weights only has a minor impact on the output. However, as more weights are pruned, this method introduces a large output error as the correlation between weights becomes more critical. For example, if most of the small-magnitude weights are negative, **the output error will become large once many of these small negative weights are removed using the magnitude-based pruning**. In this case, it would be desirable to remove a large positive weight to compensate for the introduced error instead of removing more smaller negative weights.
+
+이부분은 좀 의외이다. magnitude 방식의 prunning이 단순 threshold 값을 가지고 이루어지다...
 
 
   - 생각해볼 것.
