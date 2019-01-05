@@ -17,7 +17,26 @@
 
   - 생각해볼 것.
     - Energy-Aware Pruning.
-         
+    
+    
+### Energy Consumption Analysis
+실험을 통해서 파악된 몇가지 Lessons
+
+- Convolutional layers consume more energy than fully-connected layers.
+   - Convolution layer가 Fully Connected layer보다 많은 에너지를 소모한다.
+- Deeper CNNs with fewer weights do not necessarily consume less energy than shallower CNNs with more weights.
+   - 깊지만 적은 웨이트를 가진 CNN이 얕지만 보다 많은 웨이트를 가진 CNN보다 항상 더 적은 에너지를 소모하는 것은 아니다.
+- Reducing the number of weights can provide lower energy consumption than reducing the bitwidth of weights.
+   - 웨이트를 감소시키는 것이 웨이트의 비트폭을 감소시키는 것보다 보다 효과적으로 에너지 소모를 줄일 수 있다.
+- A lower number of MACs does not necessarily lead to lower energy consumption.
+   - 적은수의 MAC 연산이 더 적은 에너지 소모를 의미하지 않는다. (메모리 연산의 중요성)
+   
+   
+
+
+
+
+
          
 
 
